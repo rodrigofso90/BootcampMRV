@@ -1,0 +1,51 @@
+@media screen and (max-width:700px){
+    header .container{
+        
+        display: flex;
+        flex-direction: column;
+    }
+    .filme-principal{
+        font-size: 12px;
+        background: linear-gradient(rgba(0,0,0,.50), rgba(0,0,0,.50)100%), url('/Img/capa01.jpg');
+        
+    
+        height: 400px;
+        background-size:cover;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .titulo{
+        margin-top: 10%;
+        font-size: 20px;
+        font-family: 'Trebuchet MS', Arial, sans-serif;
+    }
+
+    .filme-principal .dados-filme{
+        font-size: 12px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+    
+    
+    
+    .filme-principal .info-filme{
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .botao{
+        font-size: 10px;
+        margin-top: 5px;
+        width: 190px;
+    }
+
+}
+
+@media screen and(min-width) {
+    .descricao{
+        width: 50px;
+    }
+}
