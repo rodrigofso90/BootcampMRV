@@ -1,0 +1,187 @@
+:root{
+    --laranja:#ff5e00;
+    --preta:#141414;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Elementos Base */
+
+body{
+    background: var(--preta);
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+}
+
+
+header .container{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.logo{
+    margin-left: 10px;
+    color:var(--laranja);
+    font-family: 'Arial Black', Times;
+    font-size: 40px;
+
+}
+
+header nav a{
+    text-decoration: none;
+    color: #AAA;
+    margin-right: 20px;
+    font-size: 18px;
+
+}
+header nav a:hover{
+
+    color: #fff;
+}
+
+/*Game Principal*/
+
+.game-principal{
+    font-size: 16px;
+    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100% ), url(../Img/capa.jpg);
+    background-position: center;
+
+
+    height: 400px;
+    background-size: cover;
+    
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.game-principal .descricao{
+    margin-top: 20px;
+    margin-bottom: 35px;
+    text-align: justify;
+
+}
+
+.titulo{
+    margin-top: 10%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+   
+
+}
+
+.faixa{
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+}
+
+.idade{
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    align-items:baseline ;
+
+}
+
+/* Botões */
+
+.botao{
+    background-color: rgba(0,0,0,.5);
+    border: none;
+    color: white;
+    padding: 15px 30px;
+    margin-right: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: .3s ease all;
+    margin-left: 30px;
+}
+
+.botao:hover{
+    background-color: rgba(255, 255, 255, .1);
+    color: black;
+    transform:scale(.95);
+    color: #c1c1c1;
+
+
+}
+.botao i{
+    margin-right: 8px;
+}
+
+.container{
+    margin-left: 30px;
+    
+}
+
+.game-principal .container{
+    width: 53%;
+}
+
+.box-game{
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 350px;
+    width: 100%;
+    display: block;
+    cursor: pointer;
+
+}
+
+/* Efeito Flip */
+.titulo-flip{
+    margin: 12px;
+    text-align: justify;
+}
+
+.indicacao{
+    font-size: 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+.flip{
+    
+    width: 250px;
+    height: 350px;
+    float: left;
+    perspective: 1000px;
+  }
+  
+.flip .frente{
+      position: absolute;
+      transform: rotateY(0deg);
+      backface-visibility: hidden;
+      transition: all .3s linear;
+  }
+
+.flip .fundo{
+        margin: 10px;
+        text-align: justify;
+        position: absolute;
+        transform: rotateY(180deg);
+        backface-visibility: hidden;
+        transition: all .3s linear;
+        filter: grayscale(100%);
+}
+
+.flip:active .frente{
+    transform: rotateY(-180deg);
+    cursor: pointer;
+}
+.flip:active .fundo{
+    transform: rotateY(0deg);
+    cursor: pointer;
+}
